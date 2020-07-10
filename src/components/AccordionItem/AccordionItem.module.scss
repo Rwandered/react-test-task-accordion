@@ -1,0 +1,41 @@
+$color-is-open: red;
+$default-color: initial;
+
+.item {
+  margin: 20px;
+  cursor: pointer;
+
+  &:focus {
+    color: $color-is-open;
+    outline:none;
+  }
+
+  &.opened {
+    svg {
+      fill: $color-is-open;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
+.iconArrow {
+  svg {
+    width: 15px;
+    transition: transform 0.1s ease-in-out;
+    fill: $default-color;
+  }
+}
+
+.accordionContent {
+  color: $default-color;
+}
